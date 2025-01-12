@@ -1,37 +1,36 @@
-# web_scraper
-This is the start of your AgentStack project.
+# ai
+```bash
 
-## How to build your Crew
-### With the CLI
-Add an agent using AgentStack with the CLI:  
-`agentstack generate agent <agent_name>`  
-You can also shorten this to `agentstack g a <agent_name>`  
-For wizard support use `agentstack g a <agent_name> --wizard`  
-Finally for creation in the CLI alone, use `agentstack g a <agent_name> --role/-r <role> --goal/-g <goal> --backstory/-b <backstory> --model/-m <provider/model>`
+python3 -m venv .venv
+source .venv/Scripts/activate
 
-This will automatically create a new agent in the `agents.yaml` config as well as in your code. Either placeholder strings will be used, or data included in the wizard.
+source .venv/bin/activate
 
-Similarly, tasks can be created with `agentstack g t <tool_name>`
 
-Add tools with `agentstack tools add` and view tools available with `agentstack tools list`
+pip install -r requirements.txt
 
-## How to use your Crew
-In this directory, run `poetry install`  
 
-To run your project, use the following command:  
-`agentstack run`
+pip install agentstack
 
-This will initialize your crew of AI agents and begin task execution as defined in your configuration in the main.py file.
+agentstack init web_scraper
 
-#### Replay Tasks from Latest Crew Kickoff:
+cd web_scraper
 
-CrewAI now includes a replay feature that allows you to list the tasks from the last run and replay from a specific one. To use this feature, run:  
-`crewai replay <task_id>`  
-Replace <task_id> with the ID of the task you want to replay.
+agentstack generate agent web_scraper
 
-#### Reset Crew Memory
-If you need to reset the memory of your crew before running it again, you can do so by calling the reset memory feature:  
-`crewai reset-memory`  
-This will clear the crew's memory, allowing for a fresh start.
+agentstack generate task web_scraper_task
 
-> 🪩 Project built with [AgentStack](https://github.com/AgentOps-AI/AgentStack)# ai
+
+agentstack generate agent summarizer
+
+agentstack generate task summarizer_task
+
+
+agentstack tools add firecrawl
+
+agentstack run
+
+
+
+
+```

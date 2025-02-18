@@ -1,36 +1,15 @@
-# ai
-```bash
+# LangChain
 
+## Install
+```
 python3 -m venv .venv
-source .venv/Scripts/activate
-
 source .venv/bin/activate
 
-
-pip install -r requirements.txt
-
-
-pip install agentstack
-
-agentstack init web_scraper
-
-cd web_scraper
-
-agentstack generate agent web_scraper
-
-agentstack generate task web_scraper_task
-
-
-agentstack generate agent summarizer
-
-agentstack generate task summarizer_task
-
-
-agentstack tools add firecrawl
-
-agentstack run
-
-
-
-
 ```
+
+## Resources
+- [LangChain](https://python.langchain.com/en/latest/)
+- [LangChain GitHub](https://github.com/hwchase17/langchain)
+- [LangChain YouTube](https://www.youtube.com/watch?v=8qLZ6lq5c9M&list=PLqZXwYlzsQNqOY4WV35q4VX7y4YBZiXZQ&index=1)
+
+- [browser-use](https://docs.browser-use.com/quickstart)
